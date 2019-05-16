@@ -110,7 +110,7 @@ double xInitial, yInitial, epsilon, VxInitial, VyInitial;
   System.out.printf("%8s %10s %10s %10s %10s %10s %10s %n",heading1,heading2,heading3,heading4,heading5,heading6,heading7);
 
 
-  for(int i=0;i<10000;i+=10) //  we are only printing the position every 100 steps
+  for(int i=0;i<10000;i+=100) //  we are only printing the position every 100 steps
   {
     System.out.printf("%10.3f %10.3f %10.3f %10.3f %10.3f %10.3f %10.3f\n", x1[i],y1[i],vy1[i], vx1[i],ay1[i],ax1[i],t[i]);
 
