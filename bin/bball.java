@@ -1,6 +1,3 @@
-
-
-
 import java.io.*;
 import java.lang.*;
 import java.awt.*;
@@ -34,8 +31,8 @@ public class bball
     public static final double A = 0.00426; //cross section area of ball (m2)
 
     // ball location
-    //public static final double[] Mx = {1};	//Position of magnets in x (m).
-    //public static final double[] My = {1};	//Position of magnets in y (m).
+    //public static final double[] Mx = {1};	//Position of ball  in x (m).
+    //public static final double[] My = {1};	//Position of ball in y (m).
 
 
 
@@ -113,7 +110,7 @@ double xInitial, yInitial, epsilon, VxInitial, VyInitial;
   System.out.printf("%8s %10s %10s %10s %10s %10s %10s %n",heading1,heading2,heading3,heading4,heading5,heading6,heading7);
 
 
-  for(int i=0;i<10000;i+=100) //  we are only printing the position every 100 steps
+  for(int i=0;i<10000;i+=10) //  we are only printing the position every 100 steps
   {
     System.out.printf("%10.3f %10.3f %10.3f %10.3f %10.3f %10.3f %10.3f\n", x1[i],y1[i],vy1[i], vx1[i],ay1[i],ax1[i],t[i]);
 
@@ -128,9 +125,7 @@ public static double Forcey(double xvel, double yvel , double t)
   {
 
     /*If the ball has topspin, the sign in front of CL is negative in the y-dir and therefore positive in the x-dir.
-
       Consequently, if the ball has backspin, then the opposite is true; CL is positive in the y-dir and negative in the x-dir.
-
       **The code is set for a fastball.**
 */
 
